@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+.logo {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center align items */
+}
+  
+.logo h1,
+.logo img {
+    margin: 0; /* Remove default margin */
+}
+
+#dataTable thead th {
+    border-bottom-width: 2px; /* Set the border-bottom width */
+    border-bottom-style: solid; /* Set the border-bottom style to solid */
+    font-family: "Raleway", sans-serif;
+    color: #2a2c39;
+    text-transform: uppercase;
+    /* font-family: "Poppins", sans-serif; */
+}
+
+#dataTable tbody td {
+    /* font-family: "Raleway", sans-serif; */
+    font-family: "Poppins", sans-serif;
+}
