@@ -42,6 +42,28 @@
   }
 
   /**
+   * To colloapse the cases and drive lists
+   */
+  setTimeout(() => {
+    const collapsibleItems = document.querySelectorAll('.faq-list > li');
+    collapsibleItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Close all items except the one clicked
+        collapsibleItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            const collapseTarget = otherItem.querySelector('[data-bs-toggle="collapse"]');
+            const collapseContent = otherItem.querySelector('.collapse');
+            if (collapseTarget && collapseContent) {
+              collapseTarget.classList.add('collapsed');
+              collapseContent.classList.remove('show');
+            }
+          }
+        });
+      });
+    });
+  }, 1000); 
+
+  /**
    * Navbar links active state on scroll
    */
   let navbarlinks = select('#navbar .scrollto', true)
