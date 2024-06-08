@@ -52,6 +52,10 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "github": {
+              "baseHref": "/helping-hand/",
+              "outputPath": "docs"
             }
           },
           "defaultConfiguration": "production"
