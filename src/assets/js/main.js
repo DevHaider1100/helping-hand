@@ -231,34 +231,79 @@
     }
   });
 
+  
   /**
    * Testimonials slider
    */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
+  // new Swiper('.testimonials-slider', {
+  //   speed: 600,
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 5000,
+  //     disableOnInteraction: false
+  //   },
+  //   slidesPerView: 'auto',
+    
+  //   autoplay: {
+  //     delay: 7000, // Adjusted delay to 7000ms (2-second delay added)
+  //     disableOnInteraction: false
+  //   },
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     type: 'bullets',
+  //     clickable: true
+  //   },
+  //   breakpoints: {
+  //     320: {
+  //       slidesPerView: 1,
+  //       spaceBetween: 20
+  //     },
 
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
+  //     1200: {
+  //       slidesPerView: 3,
+  //       spaceBetween: 20
+  //     }
+  //   },
+  //   on: {
+  //     init: function () {
+  //       console.log('Testimonials slider initialized.');
+  //     }
+  //   }
+  // });
+
+
+
+  setTimeout(() => {
+    new Swiper('.testimonials-slider', {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
+      },
+      // on: {
+      //       init: function () {
+      //         console.log('Testimonials slider initialized.');
+      //       }
+      //     }
+    });
+  }, 1000);
 
   /**
    * Animation on scroll
