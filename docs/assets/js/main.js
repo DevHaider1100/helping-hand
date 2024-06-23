@@ -42,7 +42,7 @@
   }
 
   /**
-   * To colloapse the cases and drive lists
+   * To collapse the cases and drive lists
    */
   setTimeout(() => {
     const collapsibleItems = document.querySelectorAll('.faq-list > li');
@@ -149,7 +149,7 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -167,7 +167,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -178,7 +178,57 @@
   });
 
   /**
-   * Porfolio isotope and filter
+   * JavaScript to handle smooth scrolling without changing the URL
+   */
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollLinks = document.querySelectorAll('.scrollto');
+
+    scrollLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - document.querySelector('#header').offsetHeight,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+
+  /**
+   * cta and index href handler
+   */
+  document.addEventListener('DOMContentLoaded', function() {
+    var logoHeaderBtn = document.getElementById('logo-header-btn');
+    var logoAnchorBtn = document.getElementById('logo-anchor-btn');
+    var footerBtn = document.getElementById('footer-btn');
+    var ctaBtn = document.getElementById('cta-btn');
+
+    const localPolicyLink = "../assets/document/Helping-Hand-Policy.html";
+    const localDirectiveLink = "../assets/document/Helping-Hand-Logo-Directives.html";
+    const prodPolicyLink = "/helping-hand/assets/document/Helping-Hand-Policy.html";
+    const prodDirectiveLink = "/helping-hand/assets/document/Helping-Hand-Logo-Directives.html";
+
+    var isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+    if (isLocalhost) {
+      ctaBtn.href = localPolicyLink;
+      logoHeaderBtn.href = localDirectiveLink;
+      logoAnchorBtn.href = localDirectiveLink;
+      footerBtn.href = localDirectiveLink;
+    } else {
+      ctaBtn.href = prodPolicyLink;
+      logoHeaderBtn.href = prodDirectiveLink;
+      logoAnchorBtn.href = prodDirectiveLink;
+      footerBtn.href = prodDirectiveLink;
+    }
+  });
+
+  /**
+   * Portfolio isotope and filter
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
@@ -231,48 +281,33 @@
     }
   });
 
+  /**
+   * Portolio activity flipper
+   */
+  document.addEventListener('DOMContentLoaded', function() {
+    const detailLinks = document.querySelectorAll('.details-link');
+    const backLinks = document.querySelectorAll('.back-link');
   
+    detailLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const card = this.closest('.portfolio-card');
+        card.style.transform = 'rotateY(180deg)';
+      });
+    });
+  
+    backLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const card = this.closest('.portfolio-card');
+        card.style.transform = 'rotateY(0deg)';
+      });
+    });
+  });
+
   /**
    * Testimonials slider
    */
-  // new Swiper('.testimonials-slider', {
-  //   speed: 600,
-  //   loop: true,
-  //   autoplay: {
-  //     delay: 5000,
-  //     disableOnInteraction: false
-  //   },
-  //   slidesPerView: 'auto',
-    
-  //   autoplay: {
-  //     delay: 7000, // Adjusted delay to 7000ms (2-second delay added)
-  //     disableOnInteraction: false
-  //   },
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'bullets',
-  //     clickable: true
-  //   },
-  //   breakpoints: {
-  //     320: {
-  //       slidesPerView: 1,
-  //       spaceBetween: 20
-  //     },
-
-  //     1200: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 20
-  //     }
-  //   },
-  //   on: {
-  //     init: function () {
-  //       console.log('Testimonials slider initialized.');
-  //     }
-  //   }
-  // });
-
-
-
   setTimeout(() => {
     new Swiper('.testimonials-slider', {
       speed: 600,
@@ -296,12 +331,7 @@
           slidesPerView: 3,
           spaceBetween: 20
         }
-      },
-      // on: {
-      //       init: function () {
-      //         console.log('Testimonials slider initialized.');
-      //       }
-      //     }
+      }
     });
   }, 1000);
 
