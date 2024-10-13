@@ -209,8 +209,15 @@
 
     const localPolicyLink = "../assets/document/Helping-Hand-Policy.html";
     const localDirectiveLink = "../assets/document/Helping-Hand-Logo-Directives.html";
-    const prodPolicyLink = "/helping-hand/assets/document/Helping-Hand-Policy.html";
-    const prodDirectiveLink = "/helping-hand/assets/document/Helping-Hand-Logo-Directives.html";
+
+    // For github pages deployement
+    // const prodPolicyLink = "/helping-hand/assets/document/Helping-Hand-Policy.html";
+    // const prodDirectiveLink = "/helping-hand/assets/document/Helping-Hand-Logo-Directives.html";
+
+    // For vercel deployment
+    const prodPolicyLink = "/assets/document/Helping-Hand-Policy.html";
+    const prodDirectiveLink = "/assets/document/Helping-Hand-Logo-Directives.html";
+
 
     var isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
