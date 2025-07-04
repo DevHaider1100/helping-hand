@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Case } from '../models/case.model';
 
 @Injectable({
   providedIn: 'root',
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class CaseDataService {
   constructor() {}
 
-  getCases() {
+  getCases(): Case[] {
     return [
       {
         caseNumber: 1,

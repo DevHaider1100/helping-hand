@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CaseDataService } from './case-data.service';
+import { CaseDataService } from './services/case-data.service';
+import { Case } from './models/case.model';
 
 @Component({
   selector: 'app-cases',
@@ -7,7 +8,7 @@ import { CaseDataService } from './case-data.service';
   styleUrls: ['./cases.component.css']
 })
 export class CasesComponent implements OnInit {
-  cases: any[] = [];
+  cases: Case[] = [];
 
   constructor (private caseDataService: CaseDataService) { }
 
