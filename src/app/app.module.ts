@@ -7,6 +7,7 @@ import { DrivesComponent } from './features/drives/drives.component';
 import { HeroComponent } from './features/hero/hero.component';
 import { PortfolioComponent } from './features/portfolio/portfolio.component';
 import { CtaComponent } from './features/cta/cta.component';
+import { TeamComponent } from './features/team/team.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CtaComponent } from './features/cta/cta.component';
     DrivesComponent,
     HeroComponent,
     PortfolioComponent,
-    CtaComponent
+    CtaComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule
