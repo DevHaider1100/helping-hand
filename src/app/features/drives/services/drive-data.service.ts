@@ -186,4 +186,14 @@ export class DriveDataService {
       { sr: 14, name: 'Haider', type: 'Iftar Drive', date: 'Mar 18, 2025', amount: 500 }
     ];
   }
+
+  // Fetch the amount spendings report data of 2025
+  getAmountSpendingsReport2025(): DistributionReport[] {
+    return [
+      { sr: 1, name: 'Ration Bags', purpose: '', quantity: 170, priceMU: 2970, discount: 0, type: 'Donations', notes: '', amount: 504900 },
+      { sr: 2, name: 'Boxes (Carton)', purpose: '', quantity: 150, priceMU: 36.667, discount: 0, type: 'Donations', notes: '', amount: 5500 },
+      { sr: 3, name: 'Cash', purpose: '', quantity: '', priceMU: 0, discount: 0, type: 'Donations', notes: '', amount: 213950 },
+      { sr: 4, name: 'Rickshaw Rent', purpose: '', quantity: '', priceMU: 0, discount: 0, type: 'Donations', notes: '', amount: 300 }
+    ];
+  }
 }

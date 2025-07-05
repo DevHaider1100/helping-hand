@@ -269,13 +269,13 @@
     </ul>
   </div>
   <div class="container">
-    <div class="section-title" data-aos="zoom-out">
+    <div class="section-title mt-5" data-aos="zoom-out">
       <!-- <h2>Drive</h2> -->
       <p>Ramadan Drive 2025</p>
     </div>
     <!-- Content Data of Ramadan drive -->
     <div class="row">
-      <!-- Total zakat funds -->
+      <!-- Total ration funds -->
       <div class="col-xl-3 col-md-6 mb-4" data-aos="zoom-in-left">
         <div class="card border-left-primary shadow h-100 py-2">
           <div class="card-body">
@@ -284,21 +284,21 @@
                 <div
                   class="text-xs font-weight-bold text-primary text-uppercase mb-1"
                 >
-                  Total Zakat Funds
+                  Total Ration Funds
                 </div>
                 <div class="h5 mb-0 font-weight-bold text-gray-800">
-                  Rs. 2,32,300
+                  Rs. 7,24,650
                 </div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-handshake fa-2x text-primary"></i>
+                <i class="fas fa-box fa-2x text-primary"></i>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Total donation funds -->
+      <!-- Total Iftar funds -->
       <div
         class="col-xl-3 col-md-6 mb-4"
         data-aos="zoom-in-left"
@@ -311,14 +311,14 @@
                 <div
                   class="text-xs font-weight-bold text-warning text-uppercase mb-1"
                 >
-                  Total Donation Funds
+                  Total Iftar Funds
                 </div>
                 <div class="h5 mb-0 font-weight-bold text-gray-800">
-                  Rs. 73,200
+                  Rs. 1,40,000
                 </div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-donate fa-2x text-warning"></i>
+                <i class="fas fa-apple-alt fa-2x text-warning"></i>
               </div>
             </div>
           </div>
@@ -343,13 +343,13 @@
                 <div class="row no-gutters align-items-center">
                   <div class="col-auto">
                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-                      56
+                      241
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-seedling fa-2x text-info"></i>
+                <i class="fas fa-boxes fa-2x text-info"></i>
               </div>
             </div>
           </div>
@@ -372,11 +372,11 @@
                   Total Net Amount
                 </div>
                 <div class="h5 mb-0 font-weight-bold text-gray-800">
-                  Rs. 3,05,500
+                  Rs. 8,64,650
                 </div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-dollar-sign fa-2x text-success"></i>
+                <i class="fas fa-money-bill-wave fa-2x text-success"></i>
               </div>
             </div>
           </div>
@@ -508,6 +508,52 @@
                       <td>{{ report.quantity }}</td>
                       <td>{{ report.amount }}</td>
                       <td>{{ report.notes }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Amount spendings report -->
+      <li>
+        <div
+          data-bs-toggle="collapse"
+          href="#drive7"
+          class="collapsed question"
+        >
+          Amount spendings report<i
+            class="bi bi-chevron-down icon-show"
+          ></i
+          ><i class="bi bi-chevron-up icon-close"></i>
+        </div>
+        <div id="drive7" class="collapse" data-bs-parent=".faq-list">
+          <div class="row">
+            <div class="col">
+              <div class="mt-5 table-overflow-content">
+                <table
+                  class="table table-bordered"
+                  id="dataTable"
+                  width="100%"
+                  cellspacing="0"
+                >
+                  <thead>
+                    <tr>
+                      <th>Sr.</th>
+                      <th>Name</th>
+                      <th>Quantity</th>
+                      <th>Price Per Unit</th>
+                      <th>Total</th>                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let report of amountSpendingReport2025">
+                      <td>{{ report.sr }}</td>
+                      <td>{{ report.name }}</td>
+                      <td>{{ report.quantity }}</td>
+                      <td>{{ report.priceMU === 0 ? '' : report.priceMU }}</td>
+                      <td>{{ report.amount }}</td>
                     </tr>
                   </tbody>
                 </table>
