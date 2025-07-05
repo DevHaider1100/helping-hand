@@ -68,6 +68,13 @@ export const RATION_FLOUR_REPORT_2024: RationFlourReport[] = [
     { sr: 6, name: 'Hassan Maqbool', item: 'One ration box & 5kg flour', quantity: 4 },
 ];
 
+export const RAMADAN_DRIVE_CARD_2025: RamadanDriveCard[] = [
+    { title: 'Total Ration Funds', value: 'Rs. 7,24,650', icon: 'fas fa-box', colorClass: 'primary', delay: 0 },
+    { title: 'Total Iftar Funds', value: 'Rs. 1,40,000', icon: 'fas fa-apple-alt', colorClass: 'warning', delay: 100 },
+    { title: 'Total Ration Quantity', value: '241', icon: 'fas fa-boxes', colorClass: 'info', delay: 200 },
+    { title: 'Total Net Amount', value: 'Rs. 8,64,650', icon: 'fas fa-money-bill-wave', colorClass: 'success', delay: 300 },
+];
+
 export const ZAKAT_DONATION_REPORT_2025: ZakatDonationReport[] = [
     { sr: 1, name: 'Shahzaib', type: 'unknown', date: 'Feb 19, 2025', amount: 3000 },
     { sr: 2, name: 'Haider', type: 'unknown', date: 'Feb 19, 2025', amount: 1500 },

@@ -12,6 +12,7 @@ export class DrivesComponent implements OnInit{
   zakatDonationReport2024: ZakatDonationReport[] = [];
   distributionReport2024: DistributionReport[] = [];
   rationFlourReport2024: RationFlourReport[] = [];
+  ramadanDriveCardData2025: RamadanDriveCard[] = [];
   zakatDonationReport2025: ZakatDonationReport[] = [];
   rationFlourReport2025: DistributionReport[] = [];
   iftarDriveCollectionReport2025: ZakatDonationReport[] = [];
@@ -24,6 +25,7 @@ export class DrivesComponent implements OnInit{
     this.zakatDonationReport2024 = this.driveDataService.getZakatDonationReport2024();
     this.distributionReport2024 = this.driveDataService.getDistributionReport2024();
     this.rationFlourReport2024 = this.driveDataService.getRationFlourReport2024();
+    this.ramadanDriveCardData2025 = this.driveDataService.getRamadanDriveCardData2025();
     this.zakatDonationReport2025 = this.driveDataService.getZakatDonationReport2025();
     this.rationFlourReport2025 = this.driveDataService.getRationFlourReport2025();
     this.iftarDriveCollectionReport2025 = this.driveDataService.getIftarDriveCollectionReport2025();

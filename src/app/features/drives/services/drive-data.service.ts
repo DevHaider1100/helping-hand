@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DistributionReport, RamadanDriveCard, RationFlourReport, ZakatDonationReport } from '../models/drive.model';
-import { AMOUNT_SPENDING_REPORT_2025, DISTRIBUTION_REPORT_2024, IFTAR_DRIVE_COLLECTION_REPORT_2025, RAMADAN_DRIVE_CARD_2024, RATION_FLOUR_REPORT_2024, RATION_FLOUR_REPORT_2025, ZAKAT_DONATION_REPORT_2024, ZAKAT_DONATION_REPORT_2025 } from 'src/app/shared/data/datastore';
+import { AMOUNT_SPENDING_REPORT_2025, DISTRIBUTION_REPORT_2024, IFTAR_DRIVE_COLLECTION_REPORT_2025, RAMADAN_DRIVE_CARD_2024, RAMADAN_DRIVE_CARD_2025, RATION_FLOUR_REPORT_2024, RATION_FLOUR_REPORT_2025, ZAKAT_DONATION_REPORT_2024, ZAKAT_DONATION_REPORT_2025 } from 'src/app/shared/data/datastore';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +27,11 @@ export class DriveDataService {
   // Fetch the Ration Bags & Flour distribution report data of 2024
   getRationFlourReport2024(): RationFlourReport[] {
     return RATION_FLOUR_REPORT_2024;
+  }
+
+  // Fetch the ramadan drive cards data of 2025
+  getRamadanDriveCardData2025(): RamadanDriveCard[] {
+    return RAMADAN_DRIVE_CARD_2025;
   }
 
   // Fetch the zakat donation report data of 2025
