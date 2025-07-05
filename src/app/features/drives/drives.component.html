@@ -145,7 +145,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let report of zakatDonationReport">
+                    <tr *ngFor="let report of zakatDonationReport2024">
                       <td>{{ report.sr }}</td>
                       <td>{{ report.name }}</td>
                       <td>{{ report.type }}</td>
@@ -193,7 +193,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let report of distributionReport">
+                    <tr *ngFor="let report of distributionReport2024">
                       <td>{{ report.sr }}</td>
                       <td>{{ report.name }}</td>
                       <td>{{ report.purpose }}</td>
@@ -253,11 +253,307 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let report of rationFlourReport">
+                    <tr *ngFor="let report of rationFlourReport2024">
                       <td>{{ report.sr }}</td>
                       <td>{{ report.name }}</td>
                       <td>{{ report.item }}</td>
                       <td>{{ report.quantity }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="section-title mt-5" data-aos="zoom-out">
+      <!-- <h2>Drive</h2> -->
+      <p>Ramadan Drive 2025</p>
+    </div>
+    <!-- Content Data of Ramadan drive -->
+    <div class="row">
+      <!-- Total ration funds -->
+      <div class="col-xl-3 col-md-6 mb-4" data-aos="zoom-in-left">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div
+                  class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                >
+                  Total Ration Funds
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  Rs. 7,24,650
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-box fa-2x text-primary"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total Iftar funds -->
+      <div
+        class="col-xl-3 col-md-6 mb-4"
+        data-aos="zoom-in-left"
+        data-aos-delay="100"
+      >
+        <div class="card border-left-warning shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div
+                  class="text-xs font-weight-bold text-warning text-uppercase mb-1"
+                >
+                  Total Iftar Funds
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  Rs. 1,40,000
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-apple-alt fa-2x text-warning"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total ration quantity -->
+      <div
+        class="col-xl-3 col-md-6 mb-4"
+        data-aos="zoom-in-left"
+        data-aos-delay="200"
+      >
+        <div class="card border-left-info shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div
+                  class="text-xs font-weight-bold text-info text-uppercase mb-1"
+                >
+                  Total Ration Quantity
+                </div>
+                <div class="row no-gutters align-items-center">
+                  <div class="col-auto">
+                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                      241
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-boxes fa-2x text-info"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total net amount -->
+      <div
+        class="col-xl-3 col-md-6 mb-4"
+        data-aos="zoom-in-left"
+        data-aos-delay="300"
+      >
+        <div class="card border-left-success shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div
+                  class="text-xs font-weight-bold text-success text-uppercase mb-1"
+                >
+                  Total Net Amount
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                  Rs. 8,64,650
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-money-bill-wave fa-2x text-success"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="faq-list mt-5">
+      <!-- Zakat & donation report -->
+      <li>
+        <div
+          data-bs-toggle="collapse"
+          href="#drive4"
+          class="collapsed question"
+        >
+          Zakat & donations report<i class="bi bi-chevron-down icon-show"></i
+          ><i class="bi bi-chevron-up icon-close"></i>
+        </div>
+        <div id="drive4" class="collapse" data-bs-parent=".faq-list">
+          <div class="row">
+            <div class="col">
+              <div class="mt-5 table-overflow-content">
+                <table
+                  class="table table-bordered"
+                  id="dataTable"
+                  width="100%"
+                  cellspacing="0"
+                >
+                  <thead>
+                    <tr>
+                      <th>Sr.</th>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Date</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let report of zakatDonationReport2025">
+                      <td>{{ report.sr }}</td>
+                      <td>{{ report.name }}</td>
+                      <td>{{ report.type }}</td>
+                      <td>{{ report.date }}</td>
+                      <td>{{ report.amount }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Distribution report -->
+      <li>
+        <div
+          data-bs-toggle="collapse"
+          href="#drive5"
+          class="collapsed question"
+        >
+          Iftar Drive Collection report<i class="bi bi-chevron-down icon-show"></i
+          ><i class="bi bi-chevron-up icon-close"></i>
+        </div>
+        <div id="drive5" class="collapse" data-bs-parent=".faq-list">
+          <div class="row">
+            <div class="col">
+              <div class="mt-5 table-overflow-content">
+                <table
+                  class="table table-bordered"
+                  id="dataTable"
+                  width="100%"
+                  cellspacing="0"
+                >
+                  <thead>
+                    <tr>
+                      <th>Sr.</th>
+                      <th>Name</th>
+                      <th>Date</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let report of iftarDriveCollectionReport2025">
+                      <td>{{ report.sr }}</td>
+                      <td>{{ report.name }}</td>
+                      <td>{{ report.date }}</td>
+                      <td>{{ report.amount }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Ration bags distribution report -->
+      <li>
+        <div
+          data-bs-toggle="collapse"
+          href="#drive6"
+          class="collapsed question"
+        >
+          Ration bags distribution report<i
+            class="bi bi-chevron-down icon-show"
+          ></i
+          ><i class="bi bi-chevron-up icon-close"></i>
+        </div>
+        <div id="drive6" class="collapse" data-bs-parent=".faq-list">
+          <div class="row">
+            <div class="col">
+              <div class="mt-5 table-overflow-content">
+                <table
+                  class="table table-bordered"
+                  id="dataTable"
+                  width="100%"
+                  cellspacing="0"
+                >
+                  <thead>
+                    <tr>
+                      <th>Sr.</th>
+                      <th>Name</th>
+                      <th>Ration Bag Quantity</th>
+                      <th>Cash Amount</th>
+                      <th>Funds Acquired From</th>                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let report of rationFlourReport2025">
+                      <td>{{ report.sr }}</td>
+                      <td>{{ report.name }}</td>
+                      <td>{{ report.quantity }}</td>
+                      <td>{{ report.amount }}</td>
+                      <td>{{ report.notes }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Amount spendings report -->
+      <li>
+        <div
+          data-bs-toggle="collapse"
+          href="#drive7"
+          class="collapsed question"
+        >
+          Amount spendings report<i
+            class="bi bi-chevron-down icon-show"
+          ></i
+          ><i class="bi bi-chevron-up icon-close"></i>
+        </div>
+        <div id="drive7" class="collapse" data-bs-parent=".faq-list">
+          <div class="row">
+            <div class="col">
+              <div class="mt-5 table-overflow-content">
+                <table
+                  class="table table-bordered"
+                  id="dataTable"
+                  width="100%"
+                  cellspacing="0"
+                >
+                  <thead>
+                    <tr>
+                      <th>Sr.</th>
+                      <th>Name</th>
+                      <th>Quantity</th>
+                      <th>Price Per Unit</th>
+                      <th>Total</th>                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let report of amountSpendingReport2025">
+                      <td>{{ report.sr }}</td>
+                      <td>{{ report.name }}</td>
+                      <td>{{ report.quantity }}</td>
+                      <td>{{ report.priceMU === 0 ? '' : report.priceMU }}</td>
+                      <td>{{ report.amount }}</td>
                     </tr>
                   </tbody>
                 </table>
