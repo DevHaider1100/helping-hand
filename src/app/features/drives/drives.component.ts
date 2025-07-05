@@ -8,16 +8,18 @@ import { DriveDataService } from './services/drive-data.service';
   styleUrls: ['./drives.component.css']
 })
 export class DrivesComponent implements OnInit{
-  zakatDonationReport: ZakatDonationReport[] = [];
-  distributionReport: DistributionReport[] = [];
-  rationFlourReport: RationFlourReport[] = [];
+  zakatDonationReport2024: ZakatDonationReport[] = [];
+  distributionReport2024: DistributionReport[] = [];
+  rationFlourReport2024: RationFlourReport[] = [];
+  zakatDonationReport2025: ZakatDonationReport[] = [];
 
   constructor(private driveDataService: DriveDataService) {}
 
   ngOnInit(): void {
-    this.zakatDonationReport = this.driveDataService.getZakatDonationReport();
-    this.distributionReport = this.driveDataService.getDistributionReport();
-    this.rationFlourReport = this.driveDataService.getRationFlourReport();
+    this.zakatDonationReport2024 = this.driveDataService.getZakatDonationReport2024();
+    this.distributionReport2024 = this.driveDataService.getDistributionReport2024();
+    this.rationFlourReport2024 = this.driveDataService.getRationFlourReport2024();
+    this.zakatDonationReport2025 = this.driveDataService.getZakatDonationReport2025();
   }
 
   isColspan(quantity: number | string): boolean {
