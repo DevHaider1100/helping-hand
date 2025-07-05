@@ -12,6 +12,7 @@ export class DrivesComponent implements OnInit{
   distributionReport2024: DistributionReport[] = [];
   rationFlourReport2024: RationFlourReport[] = [];
   zakatDonationReport2025: ZakatDonationReport[] = [];
+  rationFlourReport2025: DistributionReport[] = [];
 
   constructor(private driveDataService: DriveDataService) {}
 
@@ -20,6 +21,7 @@ export class DrivesComponent implements OnInit{
     this.distributionReport2024 = this.driveDataService.getDistributionReport2024();
     this.rationFlourReport2024 = this.driveDataService.getRationFlourReport2024();
     this.zakatDonationReport2025 = this.driveDataService.getZakatDonationReport2025();
+    this.rationFlourReport2025 = this.driveDataService.getRationFlourReport2025();
   }
 
   isColspan(quantity: number | string): boolean {

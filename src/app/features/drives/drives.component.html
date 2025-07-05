@@ -491,19 +491,19 @@
           </div>
         </div>
       </li>
-      <!-- Ration bags & flour report -->
+      <!-- Ration bags distribution report -->
       <li>
         <div
           data-bs-toggle="collapse"
-          href="#drive3"
+          href="#drive6"
           class="collapsed question"
         >
-          Ration bags & flour distribution report<i
+          Ration bags distribution report<i
             class="bi bi-chevron-down icon-show"
           ></i
           ><i class="bi bi-chevron-up icon-close"></i>
         </div>
-        <div id="drive3" class="collapse" data-bs-parent=".faq-list">
+        <div id="drive6" class="collapse" data-bs-parent=".faq-list">
           <div class="row">
             <div class="col">
               <div class="mt-5 table-overflow-content">
@@ -517,16 +517,18 @@
                     <tr>
                       <th>Sr.</th>
                       <th>Name</th>
-                      <th>Item</th>
-                      <th>Quantity</th>
+                      <th>Ration Bag Quantity</th>
+                      <th>Cash Amount</th>
+                      <th>Funds Acquired From</th>                      
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let report of rationFlourReport2024">
+                    <tr *ngFor="let report of rationFlourReport2025">
                       <td>{{ report.sr }}</td>
                       <td>{{ report.name }}</td>
-                      <td>{{ report.item }}</td>
                       <td>{{ report.quantity }}</td>
+                      <td>{{ report.amount }}</td>
+                      <td>{{ report.notes }}</td>
                     </tr>
                   </tbody>
                 </table>

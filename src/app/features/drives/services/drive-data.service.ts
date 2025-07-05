@@ -150,4 +150,20 @@ export class DriveDataService {
       { sr: 67, name: 'Haider', type: 'unknown', date: 'Mar 9, 2025', amount: 3000 },
     ];
   }
+
+  // Fetch the ration distribution report data of 2025
+  getRationFlourReport2025(): DistributionReport[] {
+    return [
+      { sr: 1, name: 'Muhammad Haider Ejaz', purpose: '', quantity: 91, priceMU: 0, discount: 0, type: 'Zakat', notes: '', amount: 0 },
+      { sr: 2, name: 'Shahzaib Ali', purpose: '', quantity: 20, priceMU: 0, discount: 0, type: 'Zakat', notes: 'Funds from Shahzaib (Cash), Haider (Cash 5k)', amount: 10000 },
+      { sr: 3, name: 'Muhammad Hassan Ijaz', purpose: '', quantity: 0, priceMU: 0, discount: 0, type: 'Zakat', notes: 'Funds from Haider (Cash)', amount: 15950 },
+      { sr: 4, name: 'Ali Hasnain', purpose: '', quantity: 38, priceMU: 0, discount: 0, type: 'Zakat', notes: 'Funds from Haider (Cash)', amount: 13000 },
+      { sr: 5, name: 'Sameer Shahzad', purpose: '', quantity: 0, priceMU: 0, discount: 0, type: 'Zakat', notes: 'Funds from Haider (Cash)', amount: 45000 },
+      { sr: 6, name: 'Shaheer Khan', purpose: '', quantity: 11, priceMU: 0, discount: 0, type: 'Zakat', notes: 'Funds from Shaheer (Cash 40k), Haider (Cash 6k + 6k)', amount: 52000 },
+      { sr: 7, name: 'Hassam', purpose: '', quantity: 0, priceMU: 0, discount: 0, type: 'Zakat', notes: 'Funds from Haider (Cash)', amount: 3000 },
+      { sr: 8, name: 'Mian Hassan Maqbool', purpose: '', quantity: 10, priceMU: 0, discount: 0, type: 'Zakat', notes: '', amount: 0 },
+      { sr: 9, name: 'Aamir Sohail', purpose: '', quantity: 0, priceMU: 0, discount: 0, type: 'Zakat', notes: 'Funds from Haider (Cash)', amount: 36000 },
+      { sr: 10, name: 'Danial Zaib', purpose: '', quantity: 0, priceMU: 0, discount: 0, type: 'Zakat', notes: 'Funds from Haider (Cash)', amount: 39000 }
+    ];
+  }
 }
