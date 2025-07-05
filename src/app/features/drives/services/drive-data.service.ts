@@ -166,4 +166,24 @@ export class DriveDataService {
       { sr: 10, name: 'Danial Zaib', purpose: '', quantity: 0, priceMU: 0, discount: 0, type: 'Zakat', notes: 'Funds from Haider (Cash)', amount: 39000 }
     ];
   }
+
+  // Fetch the iftar drive collection report data of 2025
+  getIftarDriveCollectionReport2025(): ZakatDonationReport[] {
+    return [
+      { sr: 1, name: 'Haider', type: 'Iftar Drive', date: 'Mar 10, 2025', amount: 10000 },
+      { sr: 2, name: 'Haider', type: 'Iftar Drive', date: 'Mar 12, 2025', amount: 2000 },
+      { sr: 3, name: 'Haider', type: 'Iftar Drive', date: 'Mar 12, 2025', amount: 1000 },
+      { sr: 4, name: 'Shaheer', type: 'Iftar Drive', date: 'Mar 12, 2025', amount: 230 },
+      { sr: 5, name: 'Shaheer', type: 'Iftar Drive', date: 'Mar 13, 2025', amount: 5000 },
+      { sr: 6, name: 'Haider', type: 'Iftar Drive', date: 'Mar 13, 2025', amount: 4000 },
+      { sr: 7, name: 'Shaheer', type: 'Iftar Drive', date: 'Mar 14, 2025', amount: 1000 },
+      { sr: 8, name: 'Shaheer', type: 'Iftar Drive', date: 'Mar 14, 2025', amount: 5000 },
+      { sr: 9, name: 'Haider', type: 'Iftar Drive', date: 'Mar 15, 2025', amount: 5000 },
+      { sr: 10, name: 'Haider', type: 'Iftar Drive', date: 'Mar 15, 2025', amount: 270 },
+      { sr: 11, name: 'Haider', type: 'Iftar Drive', date: 'Mar 16, 2025', amount: 2000 },
+      { sr: 12, name: 'Haider', type: 'Iftar Drive', date: 'Mar 17, 2025', amount: 100000 },
+      { sr: 13, name: 'Haider', type: 'Iftar Drive', date: 'Mar 18, 2025', amount: 4000 },
+      { sr: 14, name: 'Haider', type: 'Iftar Drive', date: 'Mar 18, 2025', amount: 500 }
+    ];
+  }
 }
