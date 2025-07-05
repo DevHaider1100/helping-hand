@@ -4,110 +4,30 @@
       <h2>Drive</h2>
       <p>Ramadan Drive 2024</p>
     </div>
-    <!-- Content Data of Ramadan drive -->
     <div class="row">
-      <!-- Total zakat funds -->
-      <div class="col-xl-3 col-md-6 mb-4" data-aos="zoom-in-left">
-        <div class="card border-left-primary shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div
-                  class="text-xs font-weight-bold text-primary text-uppercase mb-1"
-                >
-                  Total Zakat Funds
-                </div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                  Rs. 2,32,300
-                </div>
-              </div>
-              <div class="col-auto">
-                <i class="fas fa-handshake fa-2x text-primary"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Total donation funds -->
       <div
         class="col-xl-3 col-md-6 mb-4"
-        data-aos="zoom-in-left"
-        data-aos-delay="100"
+        *ngFor="let card of ramadanDriveCardData2024"
+        [attr.data-aos]="'zoom-in-left'"
+        [attr.data-aos-delay]="card.delay"
       >
-        <div class="card border-left-warning shadow h-100 py-2">
+        <div class="card border-left-{{ card.colorClass }} shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
                 <div
-                  class="text-xs font-weight-bold text-warning text-uppercase mb-1"
+                  class="text-xs font-weight-bold text-{{
+                    card.colorClass
+                  }} text-uppercase mb-1"
                 >
-                  Total Donation Funds
+                  {{ card.title }}
                 </div>
                 <div class="h5 mb-0 font-weight-bold text-gray-800">
-                  Rs. 73,200
+                  {{ card.value }}
                 </div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-donate fa-2x text-warning"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Total ration quantity -->
-      <div
-        class="col-xl-3 col-md-6 mb-4"
-        data-aos="zoom-in-left"
-        data-aos-delay="200"
-      >
-        <div class="card border-left-info shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div
-                  class="text-xs font-weight-bold text-info text-uppercase mb-1"
-                >
-                  Total Ration Quantity
-                </div>
-                <div class="row no-gutters align-items-center">
-                  <div class="col-auto">
-                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-                      56
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto">
-                <i class="fas fa-seedling fa-2x text-info"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Total net amount -->
-      <div
-        class="col-xl-3 col-md-6 mb-4"
-        data-aos="zoom-in-left"
-        data-aos-delay="300"
-      >
-        <div class="card border-left-success shadow h-100 py-2">
-          <div class="card-body">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div
-                  class="text-xs font-weight-bold text-success text-uppercase mb-1"
-                >
-                  Total Net Amount
-                </div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                  Rs. 3,05,500
-                </div>
-              </div>
-              <div class="col-auto">
-                <i class="fas fa-dollar-sign fa-2x text-success"></i>
+                <i class="{{ card.icon }} fa-2x text-{{ card.colorClass }}"></i>
               </div>
             </div>
           </div>
@@ -435,7 +355,9 @@
           href="#drive5"
           class="collapsed question"
         >
-          Iftar Drive Collection report<i class="bi bi-chevron-down icon-show"></i
+          Iftar Drive Collection report<i
+            class="bi bi-chevron-down icon-show"
+          ></i
           ><i class="bi bi-chevron-up icon-close"></i>
         </div>
         <div id="drive5" class="collapse" data-bs-parent=".faq-list">
@@ -498,7 +420,7 @@
                       <th>Name</th>
                       <th>Ration Bag Quantity</th>
                       <th>Cash Amount</th>
-                      <th>Funds Acquired From</th>                      
+                      <th>Funds Acquired From</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -523,9 +445,7 @@
           href="#drive7"
           class="collapsed question"
         >
-          Amount spendings report<i
-            class="bi bi-chevron-down icon-show"
-          ></i
+          Amount spendings report<i class="bi bi-chevron-down icon-show"></i
           ><i class="bi bi-chevron-up icon-close"></i>
         </div>
         <div id="drive7" class="collapse" data-bs-parent=".faq-list">
@@ -544,7 +464,7 @@
                       <th>Name</th>
                       <th>Quantity</th>
                       <th>Price Per Unit</th>
-                      <th>Total</th>                      
+                      <th>Total</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -552,7 +472,7 @@
                       <td>{{ report.sr }}</td>
                       <td>{{ report.name }}</td>
                       <td>{{ report.quantity }}</td>
-                      <td>{{ report.priceMU === 0 ? '' : report.priceMU }}</td>
+                      <td>{{ report.priceMU === 0 ? "" : report.priceMU }}</td>
                       <td>{{ report.amount }}</td>
                     </tr>
                   </tbody>

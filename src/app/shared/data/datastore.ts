@@ -1,4 +1,11 @@
-import { DistributionReport, RationFlourReport, ZakatDonationReport } from "src/app/features/drives/models/drive.model";
+import { DistributionReport, RamadanDriveCard, RationFlourReport, ZakatDonationReport } from "src/app/features/drives/models/drive.model";
+
+export const RAMADAN_DRIVE_CARD_2024: RamadanDriveCard[] = [
+    { title: 'Total Zakat Funds', value: 'Rs. 2,32,300', icon: 'fas fa-handshake', colorClass: 'primary', delay: 0 },
+    { title: 'Total Donation Funds', value: 'Rs. 73,200', icon: 'fas fa-donate', colorClass: 'warning', delay: 100 },
+    { title: 'Total Ration Quantity', value: '56', icon: 'fas fa-seedling', colorClass: 'info', delay: 200 },
+    { title: 'Total Net Amount', value: 'Rs. 3,05,500', icon: 'fas fa-dollar-sign', colorClass: 'success', delay: 300 },
+];
 
 export const ZAKAT_DONATION_REPORT_2024: ZakatDonationReport[] = [
     { sr: 1, name: 'Ali Hasnain', type: 'Zakat', date: 'March 16, 2024', amount: 92000 },

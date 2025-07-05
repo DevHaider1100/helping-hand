@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DistributionReport, RationFlourReport, ZakatDonationReport } from './models/drive.model';
+import { DistributionReport, RamadanDriveCard, RationFlourReport, ZakatDonationReport } from './models/drive.model';
 import { DriveDataService } from './services/drive-data.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { DriveDataService } from './services/drive-data.service';
   styleUrls: ['./drives.component.css']
 })
 export class DrivesComponent implements OnInit{
+  ramadanDriveCardData2024: RamadanDriveCard[] = [];
   zakatDonationReport2024: ZakatDonationReport[] = [];
   distributionReport2024: DistributionReport[] = [];
   rationFlourReport2024: RationFlourReport[] = [];
@@ -19,6 +20,7 @@ export class DrivesComponent implements OnInit{
   constructor(private driveDataService: DriveDataService) {}
 
   ngOnInit(): void {
+    this.ramadanDriveCardData2024 = this.driveDataService.getRamadanDriveCardData2024();
     this.zakatDonationReport2024 = this.driveDataService.getZakatDonationReport2024();
     this.distributionReport2024 = this.driveDataService.getDistributionReport2024();
     this.rationFlourReport2024 = this.driveDataService.getRationFlourReport2024();
