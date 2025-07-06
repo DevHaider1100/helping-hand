@@ -24,3 +24,11 @@ export interface RationFlourReport {
   item: string;
   quantity: number;
 }
+
+export interface RamadanDriveCard {
+  title: string;
+  value: string;
+  icon: string;
+  colorClass: string;
+  delay: number;
+}
