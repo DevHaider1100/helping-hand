@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TEAM_MEMBERS } from '../../shared/data/teamMembers';
 
 @Component({
   selector: 'app-team',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./team.component.css']
 })
 export class TeamComponent {
-
+  teamMembers = TEAM_MEMBERS;
 }
