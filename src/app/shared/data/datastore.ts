@@ -270,8 +270,4 @@ export const CASES: Case[] = [
     { caseNumber: 83, title: 'Funds for a elderly women person who needs mediacal assistance' , startDate: 'October 05, 2026', expectedAmount: 30000, collectedAmount: 32500, handler: TEAM_MEMBERS.MUHAMMAD_HAIDER_EJAZ, status: 'Completed', donations: [{ amount: 1000, date: 'Oct 05, 2026' }, { amount: 1000, date: 'Oct 05, 2026' }, { amount: 500, date: 'Oct 05, 2026' }, { amount: 30000, date: 'Oct 06, 2026' }] },
     { caseNumber: 84, title: 'Funds for a person whose shop got burnt in a fire' , startDate: 'October 06, 2026', expectedAmount: 100000, collectedAmount: 37000, handler: TEAM_MEMBERS.SHAHZAIB_ALI, status: 'Completed', donations: [{ amount: 1000, date: 'Oct 06, 2026' }, { amount: 25200, date: 'Oct 07, 2026' }, { amount: 3800, date: 'Oct 07, 2026' }, { amount: 5000, date: 'Oct 09, 2026' }, { amount: 2000, date: 'Oct 10, 2026' }] },
     { caseNumber: 85, title: 'Funds for a child who is facing DMD medical situation' , startDate: 'October 11, 2026', expectedAmount: 35000, collectedAmount: 36200, handler: TEAM_MEMBERS.ALI_HASNAIN, status: 'Completed', donations: [{ amount: 5000, date: 'Oct 11, 2026' }, { amount: 2000, date: 'Oct 11, 2026' }, { amount: 100, date: 'Oct 11, 2026' }, { amount: 5000, date: 'Oct 12, 2026' }, { amount: 100, date: 'Oct 13, 2026' }, { amount: 7000, date: 'Oct 13, 2026' }, { amount: 2000, date: 'Oct 14, 2026' }, { amount: 2000, date: 'Oct 14, 2026' }, { amount: 1000, date: 'Oct 14, 2026' }, { amount: 12000, date: 'Oct 14, 2026' }] },
-
-
-
-    
 ]; 
